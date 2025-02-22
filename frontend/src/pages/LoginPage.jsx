@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuthStore } from "../store/useAuthStore";
-import AuthImagePattern from "../components/AuthImagePattern";
+
 import { Link } from "react-router-dom";
 import { Eye, EyeOff, Loader2, Lock, Mail, MessagesSquare } from "lucide-react";
 
@@ -29,10 +29,10 @@ const LoginPage = () => {
                 className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20
               transition-colors"
               >
-                <MessagesSquare className="w-6 h-6 text-primary" />
+                <MessagesSquare className="w-8 h-8 text-primary" />
               </div>
-              <h1 className="text-2xl font-bold mt-2">Welcome Back</h1>
-              <p className="text-base-content/60">Sign in to your account</p>
+              <h1 className="text-4xl font-bold mt-2">Welcome Back</h1>
+              <p className="text-base-content/80">Sign in to your account</p>
             </div>
           </div>
 
@@ -88,7 +88,7 @@ const LoginPage = () => {
             <button type="submit" className="btn btn-primary w-full" disabled={isLoggingIn}>
               {isLoggingIn ? (
                 <>
-                  <Loader2 className="h-5 w-5 animate-spin" />
+                  <Loader2 className="h-6 w-6 animate-spin" />
                   Loading...
                 </>
               ) : (
@@ -114,7 +114,7 @@ const LoginPage = () => {
 
       {/* Right Side - Image/Pattern */}
       <div className="hidden lg:flex flex-col items-center justify-center bg-base-200">
-  <h1 className="text-xl font-bold mb-4"> Welcome back to Rishi's Chat app!</h1>
+  <h1 className="text-[27px] font-bold mb-4"> Welcome back to Rishi's MyChat app!</h1>
   
   <model-viewer 
     src="/wave.glb" 
@@ -123,7 +123,7 @@ const LoginPage = () => {
     camera-controls 
     camera-orbit="8deg 95deg 50deg"
     disable-zoom 
-    style={{ width: "100%", height: "500px", maxWidth: "500px" }} 
+    style={{ width: "100%", height: "700px", maxWidth: "700px" }} 
   />
 </div>
     </div>

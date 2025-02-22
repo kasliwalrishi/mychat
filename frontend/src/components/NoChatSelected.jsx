@@ -18,7 +18,7 @@ const NoChatSelected = () => {
             disable-zoom
             style={{
               width: "100%",
-              height: "390px",
+              height: "435px",
               maxWidth: "500px",
             }}
            

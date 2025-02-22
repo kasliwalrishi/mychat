@@ -46,10 +46,10 @@ const SignUpPage = () => {
                 className="size-12 rounded-xl bg-primary/10 flex items-center justify-center 
               group-hover:bg-primary/20 transition-colors"
               >
-                <MessagesSquare className="size-6 text-primary" />
+                <MessagesSquare className="size-8 text-primary" />
               </div>
-              <h1 className="text-2xl font-bold mt-2">Create Your Account</h1>
-              <p className="text-base-content/60">Get started with your free account</p>
+              <h1 className="text-3xl font-bold mt-2">Create Your Account</h1>
+              <p className="text-base-content/70">Get started with your free account</p>
             </div>
           </div>
 
@@ -151,7 +151,7 @@ const SignUpPage = () => {
       {/* right side */}
       {/* right side */}
 <div className="hidden lg:flex flex-col items-center justify-center bg-base-200">
-  <h1 className="text-xl font-bold mb-4">Hello there! Welcome to Rishi's Chat app!</h1>
+  <h1 className="text-[25px] font-bold mb-4">Hello there! Welcome to Rishi's MyChat app!</h1>
   
   <model-viewer 
     src="/wave.glb" 
@@ -160,7 +160,7 @@ const SignUpPage = () => {
     camera-controls 
     camera-orbit="8deg 95deg 50deg"
     disable-zoom 
-    style={{ width: "100%", height: "500px", maxWidth: "500px" }} 
+    style={{ width: "100%", height: "700px", maxWidth: "700px" }} 
   />
 </div>
 
