@@ -154,7 +154,7 @@ const SignUpPage = () => {
   <h1 className="text-[25px] font-bold mb-4">Hello there! Welcome to Rishi's MyChat app!</h1>
   
   <model-viewer 
-    src="/wave.glb" 
+    src="/dancer_girl.glb" 
     alt="A waving human model" 
     autoplay 
     camera-controls 
