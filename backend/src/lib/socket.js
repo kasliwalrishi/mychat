@@ -8,7 +8,7 @@ const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     // Add your local development URL to the list of allowed origins
-    origin: ["https://mychat-cuj6.onrender.com", "http://localhost:5173"],
+    origin: ["https://mychatw.netlify.app", "http://localhost:5173"],
   },
 });
 

@@ -25,8 +25,8 @@ const __dirname = path.resolve();
 //   })
 // );
 const allowedOrigins = [
-  "https://mychat-cuj6.onrender.com", // Your deployed frontend
-  "http://localhost:5173",           // Your local development frontend
+  "http://localhost:5173",
+  "https://mychatw.netlify.app" // <-- ADD THIS LINE
 ];
 
 const corsOptions = {
