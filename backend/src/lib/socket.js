@@ -7,7 +7,8 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://mychat-cuj6.onrender.com"],
+    // Add your local development URL to the list of allowed origins
+    origin: ["https://mychat-cuj6.onrender.com", "http://localhost:5173"],
   },
 });
 

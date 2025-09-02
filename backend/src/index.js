@@ -16,14 +16,41 @@ dotenv.config();
 const PORT = process.env.PORT;
 const __dirname = path.resolve();
 
+// app.use(express.json());
+// app.use(cookieParser());
+// app.use(
+//   cors({
+//     origin: "https://mychat-cuj6.onrender.com",
+//     credentials: true,
+//   })
+// );
+const allowedOrigins = [
+  "https://mychat-cuj6.onrender.com", // Your deployed frontend
+  "http://localhost:5173",           // Your local development frontend
+];
+
+const corsOptions = {
+  origin: (origin, callback) => {
+    // Allow requests from the allowed origins
+    if (allowedOrigins.includes(origin) || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true, // This is important for cookies, authorization headers, etc.
+};
+
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-  cors({
-    origin: "https://mychat-cuj6.onrender.com",
-    credentials: true,
-  })
-);
+
+// 2. Use the new cors options
+app.use(cors(corsOptions));
+
+// =======================================================
+// END OF CHANGES
+// =======================================================
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/messages", messageRoutes);
